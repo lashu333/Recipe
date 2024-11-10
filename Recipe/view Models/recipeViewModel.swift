@@ -12,9 +12,9 @@ class RecipesViewModel: ObservableObject {
     
     init() {
         print("RecipesViewModel initialized")
-        // Add print statement before loading data
+        
         print("Starting to load recipes")
-        // Your loading logic here
+        
         print("Finished loading recipes")
     }
 }
