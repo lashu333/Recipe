@@ -49,7 +49,7 @@ extension Recipe {
             mainInfo: MainInformation(
                 name: "Spaghetti Bolognese",
                 description: "A classic Italian pasta dish with rich tomato and meat sauce.",
-                imageName: "spaghetti",
+                imageName: "image1",
                 author: "Chef Mario",
                 time: 30,
                 price: .medium
@@ -69,7 +69,7 @@ extension Recipe {
             mainInfo: MainInformation(
                 name: "Caesar Salad",
                 description: "Fresh romaine lettuce with Caesar dressing, croutons, and Parmesan.",
-                imageName: "salad",
+                imageName: "image2",
                 author: "Chef Julia",
                 time: 15,
                 price: .low
