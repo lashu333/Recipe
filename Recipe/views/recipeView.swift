@@ -12,18 +12,47 @@ struct recipeView: View {
     
     var body: some View {
         VStack{
-        Text("Hello,this is \(recipe.mainInfo.name) recipe")
+        Text("\(recipe.mainInfo.name) recipe")
+                .font(.title)
+                .padding()
+                .foregroundColor(.red)
+            
         Text("\(recipe.mainInfo.description)")
-        Text(recipe.mainInfo.author)
+            .font(.headline)
+                .padding()
+            
+        Text("author: \(recipe.mainInfo.author)")
+            .font(.headline)
+                .padding()
         Image(recipe.mainInfo.imageName)
             .resizable()
             .scaledToFit()
             .frame(width:100 , height:100)
         Text(recipe.mainInfo.price.rawValue)
-        Text("\(recipe.mainInfo.time)")
+            .font(.headline)
+                .padding()
+        Text("\(recipe.mainInfo.time) minutes")
+            .font(.headline)
+            .padding()
+        Text("ingredients:")
+            .font(.headline)
+            .padding()
+            .foregroundColor(.red)
+            .lineLimit(0)
         ForEach (recipe.ingredients, id: \.name) { ingredient in
             Text("\(ingredient.name)")
         }
+        Text("directions:")
+            .font(.headline)
+            .padding()
+            .foregroundColor(.red)
+            .lineLimit(0)
+        ForEach(Array(recipe.directions.enumerated()), id: \.offset)
+            { index,step in
+            Text(" \(index+1) \(step)")
+                
+            }
+            
     }
         }
     }
